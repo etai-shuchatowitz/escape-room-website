@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rituals - The Order of the Hollow Moon</title>
+<style>
+body {
+  background: #0c0c0c;
+  color: #f0e9da;
+  font-family: "Georgia", serif;
+  margin: 0;
+  padding: 20px;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px),
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.01), transparent 15%);
+  background-size: 18px 18px, 400px 400px;
+}
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #fff1dc;
+  border-bottom: 1px solid #442b2b;
+  padding-bottom: 10px;
+  text-shadow: 0 0 6px #640000;
+}
+.ritual {
+  margin: 20px auto;
+  max-width: 700px;
+  background: rgba(20, 10, 10, 0.4);
+  border: 1px solid #2b1212;
+  padding: 20px;
+}
+.symbol {
+  text-align: center;
+  font-size: 48px;
+  color: #b91111;
+  margin-top: 10px;
+}
+.btn {
+  background: linear-gradient(#401414, #7b1515);
+  color: #fff2f2;
+  border: 1px solid #2b0c0c;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+<h1>☽ Ritual Archives ☾</h1>
+
+<div class="ritual">
+  <h2>The Rite of Silent Binding</h2>
+  <p>To be performed during the waning crescent. A mirror, three black candles, and silence are required. Speak no words. Let the ink dry on the parchment before sealing.</p>
+</div>
+
+<div class="ritual">
+  <h2>The Offering of the Hollow Flame</h2>
+  <p>Burn herbs collected under moonless skies. Whisper the names of the forgotten into the ash. Leave nothing behind.</p>
+</div>
+
+<div class="symbol">☾✠☽</div>
+
+<a class="btn" href="index.html">Return to the Gate</a>
+
+<script>
+// Check login status
+let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+console.log(isLoggedIn)
+
+if (!isLoggedIn) {
+  alert("You are not authorized to view the Rituals. The gate remains closed.");
+  window.location.href = "index.html";
+}
+</script>
+</body>
+</html>
