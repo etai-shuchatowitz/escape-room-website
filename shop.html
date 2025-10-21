@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Shop — The Order of the Hollow Moon</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Optional: shop-specific additions */
+    .product {
+      background: rgba(15, 10, 10, 0.5);
+      border: 2px solid #2b1714;
+      padding: 14px;
+      margin-top: 12px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .product img {
+      width: 160px;
+      height: auto;
+      border: 2px solid #3b1a1a;
+    }
+
+    .product-details {
+      flex: 1;
+    }
+
+    .product-title {
+      font-size: 20px;
+      color: #f3efe6;
+      margin-bottom: 6px;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #cfc2b5;
+      margin: 8px 0;
+    }
+
+    .btn-buy {
+      background: linear-gradient(#1c1b15, #383218);
+      color: #fff2f2;
+      border: 1px solid #2b0c0c;
+      padding: 6px 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-buy:hover {
+      background: linear-gradient(#2a251a, #4a3d22);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="header">
+      <div class="site-title">THE ORDER OF THE HOLLOW MOON</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="rituals.html">Rituals</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+
+    <div class="content">
+      <div class="col-left">
+        <div class="symbol">☾✠☽</div>
+        <div class="intro">
+          <h2 class="glitch">Occult Offerings</h2>
+          <p style="margin-top:8px;">
+            These items are not shipped through conventional means.
+            Delivery may be via mist, crow, or inexplicable dream.
+          </p>
+          <p style="margin-top:12px; color:#cfc2b5;">
+            All sales final. No returns across planes.
+          </p>
+        </div>
+
+        <div class="product">
+          <img src="images/raising_spirits_book.jpg" alt="Book cover of 'A Guide to Raising Spirits'">
+          <div class="product-details">
+            <div class="product-title">A Guide to Raising Spirits<br><small>and Other Otherworldly Endeavors</small>
+            </div>
+            <div class="product-price">$13.13 USD</div>
+            <p style="color:#d9cfc0;">
+              Penned by Zola Henderson in a lightning-lit trance, this controversial guide
+              covers the ethics, etiquette, and troubleshooting of spirit communication.
+              Includes diagrams, incantations, and a bonus chapter on haunted appliances.
+            </p>
+            <button class="btn-buy" onclick="alert('Order received. Expect chills.')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="login-box" style="margin-top:18px;">
+          <h3>Shipping Details</h3>
+          <ul style="color:#d8ccc0; margin-left:18px;">
+            <li>Delivery time: 3–5 lunar cycles</li>
+            <li>Packaging: discreet, lightly cursed</li>
+            <li>Tracking number: whispered to you in a dream</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <div class="login-box">
+          <h3>More Coming Soon</h3>
+          <ul style="margin-left:18px; color:#d8ccc0;">
+            <li>The Hollow Moon Talisman</li>
+            <li>Zola's Spirit Board (vintage USB)</li>
+            <li>Hand-poured Ritual Candles (smell like moss and regret)</li>
+            <li>Cursed Temporary Tattoos</li>
+          </ul>
+          <p style="margin-top:10px; font-size:13px; color:#bfb4a7;">
+            Not all items will be visible to all users. Some require initiation.
+          </p>
+        </div>
+
+        <div class="login-box" style="margin-top:12px; text-align:center;">
+          <small class="legend">Store powered by forgotten scripts and a rattling server under the stairs.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div style="float:left;">© The Order of the Hollow Moon — est. 1999</div>
+      <div style="float:right;">Last updated: <strong>September 7, 2005</strong></div>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+</body>
+
+</html>
