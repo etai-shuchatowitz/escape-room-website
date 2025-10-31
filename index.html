@@ -101,11 +101,11 @@
       Answer the 3 security questions to access the site without a login.
     </p>
     <form id="forgotForm" onsubmit="return doForgot(event);">
-      <label for="favoriteColor">What is the color?</label><br/>
+      <label for="favoriteColor">What is Zola's favorite color?</label><br/>
       <input id="favoriteColor" name="favoriteColor" required /> <br/>
-      <label for="formulaAmount">How much formula do you feed your child?</label><br/>
+      <label for="formulaAmount">How much formula should you should feed your child?</label><br/>
       <input id="formulaAmount" name="formulaAmount" required /> <br/>
-      <label for="scariestMovie">What is your favorite movie?</label><br/>
+      <label for="scariestMovie">What is Zola's favorite movie?</label><br/>
       <input id="scariestMovie" name="scariestMovie" required /> <br/>
       <div style="margin-top:12px; text-align:right;">
         <button class="btn" type="button" onclick="closeForgot()" style="margin-right:8px; background:#444;">Cancel</button>
@@ -168,7 +168,7 @@ function doForgot(e) {
   console.log(color, movie, amount)
   if (!color || !movie || !amount) { alert('Please fill out all fields to access'); return false; }
 
-  if (color.toLowerCase().trim() != "red") { alert('That is NOT the correct color'); return false; }
+  if (color.toLowerCase().trim() != "sea green") { alert('That is NOT the correct color'); return false; }
   if (amount.toLowerCase().trim() != "19") { alert('That is NOT the correct amount'); return false; }
   if (movie.toLowerCase().trim()  != "ghost") { alert('That is NOT the correct movie'); return false; }
   // do not actually send anything — show a mock message
