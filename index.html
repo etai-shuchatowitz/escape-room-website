@@ -50,7 +50,7 @@
         <h3>Member Login</h3>
         <form id="loginForm" onsubmit="return fauxLogin(event);" action="#" method="post" autocomplete="off">
           <label for="username">Username</label>
-          <input id="username" name="username" type="text" placeholder="Your chosen name" />
+          <input id="username" name="username" type="text" placeholder="eshuchat" />
 
           <label for="password">Password</label>
           <input id="password" name="password" type="password" placeholder="••••••••" />
@@ -101,11 +101,11 @@
       Answer the 3 security questions to access the site without a login.
     </p>
     <form id="forgotForm" onsubmit="return doForgot(event);">
-      <label for="favoriteColor">What is Zola's favorite color?</label><br/>
+      <label for="favoriteColor">What is eshuchats favorite color?</label><br/>
       <input id="favoriteColor" name="favoriteColor" required /> <br/>
-      <label for="formulaAmount">How much formula should you should feed your child?</label><br/>
+      <label for="formulaAmount">How much formula (in oz's) should eshuchat feed his child?</label><br/>
       <input id="formulaAmount" name="formulaAmount" required /> <br/>
-      <label for="scariestMovie">What is Zola's favorite movie?</label><br/>
+      <label for="scariestMovie">What is eshuchat's favorite movie?</label><br/>
       <input id="scariestMovie" name="scariestMovie" required /> <br/>
       <div style="margin-top:12px; text-align:right;">
         <button class="btn" type="button" onclick="closeForgot()" style="margin-right:8px; background:#444;">Cancel</button>
@@ -120,12 +120,19 @@
 
 <script>
 
+  function hideLogin() {
+    if (isLoggedIn) {
+      document.getElementById('loginbox').style.display = 'none'
+    } 
+  }
+
 
   let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     window.addEventListener('DOMContentLoaded', function() {
   if (isLoggedIn) {
     document.querySelector('.intro').innerHTML = '<h2 class="glitch">Privileged Access</h2><p style="margin-top:8px;">Welcome back, Initiate. You may now view restricted rites.</p>';
-  }
+    document.getElementById('loginbox').style.display = 'none'
+  } 
 });
 
 console.log(isLoggedIn)
@@ -174,7 +181,9 @@ function doForgot(e) {
   // do not actually send anything — show a mock message
   isLoggedIn = true;
   localStorage.setItem('isLoggedIn', 'true');
+  alert("You are logged in. Continue what you seek.");
   closeForgot();
+  hideLogin();
   return false;
 }
 
